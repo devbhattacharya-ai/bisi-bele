@@ -3,8 +3,8 @@
 :root {
   --forest: #1b3f29;
   --forest-soft: #244f34;
-  --orange: #ef642f;
-  --orange-hover: #d95522;
+  --orange: #c65227;
+  --orange-hover: #a8441f;
   --cream: #f9f5e8;
   --cream-deep: #f0ead6;
   --find-us: #f5c542;
@@ -436,7 +436,7 @@ select {
   font-size: 1rem;
   border: none;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(239, 100, 47, 0.35);
+  box-shadow: 0 6px 18px rgba(198, 82, 39, 0.35);
 }
 
 .btn-primary:hover {
