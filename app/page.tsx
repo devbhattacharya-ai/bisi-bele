@@ -188,12 +188,6 @@ export default function HomePage() {
             </p>
             <p className="concept-note">Concept menu · prices for demo only</p>
 
-            <div className="category-tabs" aria-hidden="true">
-              {MENU.map((c) => (
-                <span key={c.category}>{c.category}</span>
-              ))}
-            </div>
-
             {MENU.map((group) => (
               <div key={group.category} style={{ marginBottom: "2rem" }}>
                 <h3

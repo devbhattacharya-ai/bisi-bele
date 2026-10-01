@@ -482,6 +482,17 @@ select {
   padding: clamp(3rem, 7vw, 5rem) 1.25rem;
 }
 
+/* Sticky header offset for in-page anchors */
+#main,
+#story,
+#menu,
+#favourites,
+#visit,
+#order,
+#top {
+  scroll-margin-top: 96px;
+}
+
 .section-inner {
   max-width: var(--max);
   margin: 0 auto;
@@ -569,25 +580,6 @@ select {
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--muted);
-}
-
-.category-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.75rem;
-}
-
-.category-tabs span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 40px;
-  padding: 0.4rem 0.9rem;
-  border-radius: var(--radius-pill);
-  background: var(--cream-deep);
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--forest);
 }
 
 .menu-grid {
@@ -834,6 +826,19 @@ select {
   color: var(--muted);
 }
 
+.field-error {
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #9a3412;
+}
+
+.field input[aria-invalid="true"],
+.field textarea[aria-invalid="true"],
+.field select[aria-invalid="true"] {
+  border-color: #9a3412;
+}
+
 .success-box {
   background: var(--forest);
   color: var(--cream);
@@ -959,9 +964,14 @@ select {
   outline-offset: 4px;
 }
 
-/* Skip target: allow main to be focused without visual jump noise */
+/* Skip target: visible ring when focused via skip link */
 #main:focus {
   outline: none;
+}
+
+#main:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
 }
 
 /* Ensure primary interactive controls stay ≥44px */
